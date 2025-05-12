@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+ <%- include('header') %>
+  <main>
+    <h2>Товар был удалён</h2>
+    <p>Название: <%= deleted.name %></p>
+    <p>Цена: <%= deleted.price %></p>
+    <p>Описание: <%= deleted.description %></p>
+  </main>
+  <%- include('footer') %>
+</body>
+</html>

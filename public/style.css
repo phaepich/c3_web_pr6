@@ -1,0 +1,26 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background: #f4f4f4;
+}
+
+header, footer {
+  background: #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+main {
+  margin: 20px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid #ccc;
+  padding: 5px;
+  text-align: left;
+}

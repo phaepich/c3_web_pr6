@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <%- include('header') %>
+  <main>
+    <form method="POST" id="deleteForm" action="/del/<%= products[0] ? products[0].id : '' %>">
+
+
+      <select name="productId" onchange="updateFormAction(this.value)">
+        <% products.forEach(p => { %>
+          <option value="<%= p.id %>"><%= p.name %></option>
+        <% }) %>
+      </select>
+      <button type="submit">Удалить</button>
+    </form>
+
+    <table>
+      <tr><th>ID</th><th>Название</th><th>Цена</th><th>Описание</th></tr>
+      <% products.forEach(p => { %>
+        <tr>
+          <td><%= p.id %></td>
+          <td><%= p.name %></td>
+          <td><%= p.price %></td>
+          <td><%= p.description %></td>
+        </tr>
+      <% }) %>
+    </table>
+  </main>
+  <%- include('footer') %>
+  <script>
+    function updateFormAction(id) {
+      document.getElementById('deleteForm').action = '/del/' + id
+    }
+  </script>
+</body>
+</html>
